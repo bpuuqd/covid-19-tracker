@@ -60,9 +60,9 @@ function App() {
         setCountry(countryCode);
         setCountryInfo(data);
         countryCode === "worldwide"
-          ? setMapCenter([34.80746, -40.4796])
-          : setMapCenter([data.countryInfo.lat, data.countryInfo.long]) && setMapZoom(5);
-                
+          ? function() {setMapCenter([34.80746, -40.4796]); setMapZoom(3);}()
+          : function () { setMapCenter([data.countryInfo.lat, data.countryInfo.long]); setMapZoom(5); }();
+
       });
   };
 
@@ -84,7 +84,7 @@ function App() {
         </div>
         <div className="app__stats">
           <InfoBox
-            isRed            
+            isRed
             active={casesType === "cases"}
             onClick={(e) => setCasesType("cases")}
             title="Coronavirus Cases"

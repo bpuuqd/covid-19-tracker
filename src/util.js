@@ -4,16 +4,16 @@ import { Circle, Popup } from "react-leaflet";
 
 const casesTypeColors = {
     cases: {
-      multiplier: 800,
-      option: { color:"#cc1034", fillColor: "#cc1034" },
+      multiplier: 300,
+      option: { color:"#ff6c47", fillColor: "#ff6c47" },
     },
     recovered: {
-      multiplier: 1200,
+      multiplier: 300,
       option: { color:"#7dd71d", fillColor: "#7dd71d" },
     },
     deaths: {
-      multiplier: 2000,
-      option: { color:"#ff6c47", fillColor: "#ff6c47" }
+      multiplier: 1000,
+      option: { color:"#cc1034", fillColor: "#cc1034" }
     },
   };
 
